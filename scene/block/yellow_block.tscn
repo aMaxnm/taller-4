@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1k2ro2yypcmq"]
+
+[ext_resource type="Script" uid="uid://b4e8t3o0c1bqp" path="res://scene/block/yellow_block.gd" id="1_2soxy"]
+[ext_resource type="Texture2D" uid="uid://80fxxah1gl0" path="res://assets/sprites/golden_block.png" id="1_gmvdv"]
+[ext_resource type="PackedScene" uid="uid://cnwktfy5gtvu4" path="res://scene/fruta/fruta.tscn" id="2_phewx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2soxy"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phewx"]
+size = Vector2(28, 0.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxige"]
+size = Vector2(28, 2)
+
+[node name="YellowBlock" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource("1_2soxy")
+fruit_scene = ExtResource("2_phewx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2soxy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_gmvdv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.875)
+shape = SubResource("RectangleShape2D_phewx")
+one_way_collision = true
+debug_color = Color(0.83353615, 0.0013493937, 0.93884695, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_uxige")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

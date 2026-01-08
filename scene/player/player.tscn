@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt38d6t712fer" path="res://assets/sprites/player.png" id="2_6smn3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cm2cf"]
-size = Vector2(15, 21)
+size = Vector2(14, 18)
 
 [sub_resource type="Animation" id="Animation_6smn3"]
 length = 0.001
@@ -139,10 +139,11 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6smn3"]
+radius = 8.0
 height = 22.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6smn3"]
-size = Vector2(14.875, 1.34375)
+size = Vector2(14.875, 1.671875)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
@@ -156,7 +157,7 @@ frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 5
-position = Vector2(-0.5, 5.5)
+position = Vector2(-1, 6)
 shape = SubResource("RectangleShape2D_cm2cf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -185,7 +186,7 @@ collision_layer = 8
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JumpHitBox"]
-position = Vector2(-1, 16)
+position = Vector2(-2, 15.1640625)
 shape = SubResource("RectangleShape2D_6smn3")
 disabled = true
 debug_color = Color(0.7242273, 0.47596866, 0.09920225, 0.41960785)

@@ -131,14 +131,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ghava"]
-radius = 16.0
+radius = 15.033297
 
 [node name="Fruta" type="Area2D"]
 collision_layer = 0
 script = ExtResource("1_yqgro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_u7bti")
 animation = &"idle"
 autoplay = "idle"
