@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://ksrejexeb1gf"]
+[gd_scene load_steps=12 format=4 uid="uid://ksrejexeb1gf"]
 
 [ext_resource type="PackedScene" uid="uid://c5yedfkyomjme" path="res://scene/player/player.tscn" id="1_8aylg"]
 [ext_resource type="PackedScene" uid="uid://byjuqf8n6r1qh" path="res://scene/enemy/snail/snail.tscn" id="2_saiaw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cnwktfy5gtvu4" path="res://scene/fruta/fruta.tscn" id="6_n6eni"]
 [ext_resource type="Texture2D" uid="uid://47umb66vnqlf" path="res://assets/tiles/Terrain (16x16).png" id="7_mj66c"]
 [ext_resource type="PackedScene" uid="uid://d1k2ro2yypcmq" path="res://scene/block/yellow_block.tscn" id="8_mti6n"]
+[ext_resource type="PackedScene" uid="uid://c36qf8sg54uge" path="res://scene/pause/pause.tscn" id="9_3uiwr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mti6n"]
 texture = ExtResource("7_mj66c")
@@ -283,3 +284,5 @@ position = Vector2(4911, 402)
 
 [node name="YellowBlock13" parent="." instance=ExtResource("8_mti6n")]
 position = Vector2(4176, 402)
+
+[node name="Pause" parent="." instance=ExtResource("9_3uiwr")]

@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://c36qf8sg54uge"]
+
+[ext_resource type="Script" uid="uid://th6bftghqfpn" path="res://scene/pause/pause.gd" id="1_uiedh"]
+[ext_resource type="FontFile" uid="uid://bltsfl5qv5mlc" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_grunj"]
+[ext_resource type="Texture2D" uid="uid://dg0lr273uj8nm" path="res://assets/buttons/Play/Default.png" id="2_wgm88"]
+[ext_resource type="Texture2D" uid="uid://bwglbpa8r0e6r" path="res://assets/buttons/Play/Hover.png" id="3_w2ppk"]
+[ext_resource type="Texture2D" uid="uid://cg767f0b4k4hc" path="res://assets/buttons/Levels/Default.png" id="5_cn8mt"]
+[ext_resource type="Texture2D" uid="uid://vkrbo0mbjpt5" path="res://assets/buttons/Levels/Hover.png" id="6_0camu"]
+[ext_resource type="Texture2D" uid="uid://dvp6n1y61i241" path="res://assets/buttons/ArrowLeft-Thin/Default.png" id="7_ni3vd"]
+[ext_resource type="Texture2D" uid="uid://bx2da4y2hwfck" path="res://assets/buttons/ArrowLeft-Thin/Hover.png" id="8_w61ms"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8eeok"]
+font = ExtResource("2_grunj")
+font_size = 34
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_uiedh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.6156863)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -29.5
+offset_right = 4.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="pause" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PAUSE"
+label_settings = SubResource("LabelSettings_8eeok")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_wgm88")
+texture_hover = ExtResource("3_w2ppk")
+
+[node name="menu" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_cn8mt")
+texture_hover = ExtResource("6_0camu")
+
+[node name="exit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_ni3vd")
+texture_hover = ExtResource("8_w61ms")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
