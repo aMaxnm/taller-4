@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://y3qebctmj1yx"]
+
+[ext_resource type="Texture2D" uid="uid://c788qemf3x2ki" path="res://assets/background/background_plains-Sheet1.png" id="1_dnyde"]
+[ext_resource type="Texture2D" uid="uid://yb7rjsqx87a" path="res://assets/background/background_plains-Sheet2.png" id="2_mel4a"]
+[ext_resource type="Texture2D" uid="uid://utm0ir50y1q7" path="res://assets/background/background_plains-Sheet3.png" id="3_vlsy7"]
+[ext_resource type="Texture2D" uid="uid://cloh03o7jw6to" path="res://assets/background/background_plains-Sheet4.png" id="4_v4jyr"]
+[ext_resource type="Texture2D" uid="uid://d3m581k4ua0m0" path="res://assets/background/background_plains-Sheet5.png" id="5_sb67i"]
+
+[node name="Background1" type="Node2D"]
+position = Vector2(386, 181)
+
+[node name="HighMountain" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HighMountain"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_dnyde")
+
+[node name="Mountain" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(1120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mountain"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_mel4a")
+
+[node name="NewMountain" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(1120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="NewMountain"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_vlsy7")
+
+[node name="Field" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(1120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Field"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_v4jyr")
+
+[node name="Grass" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(1120, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Grass"]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("5_sb67i")

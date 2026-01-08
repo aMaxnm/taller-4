@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dodr3pi1x8ytv"]
+
+[ext_resource type="Script" uid="uid://c6bygqytfi8kl" path="res://scene/playerCamara/player_camara.gd" id="1_s171i"]
+
+[node name="PlayerCamara" type="Camera2D"]
+position = Vector2(339, 321)
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
+script = ExtResource("1_s171i")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

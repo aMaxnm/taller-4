@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://t5nglgphn6uh"]
+
+[ext_resource type="Texture2D" uid="uid://cmxs7xeoo52b1" path="res://assets/sprites/heart.png" id="1_hta5f"]
+[ext_resource type="Script" uid="uid://2qk3ru8gj73v" path="res://scene/hud/hud.gd" id="1_in6qw"]
+[ext_resource type="FontFile" uid="uid://bltsfl5qv5mlc" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_in6qw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8iokb"]
+font = ExtResource("2_in6qw")
+font_size = 22
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_in6qw")
+
+[node name="MC" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HeartContainer" type="HBoxContainer" parent="MC/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="H3" type="TextureRect" parent="MC/HBoxContainer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("1_hta5f")
+
+[node name="H2" type="TextureRect" parent="MC/HBoxContainer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("1_hta5f")
+
+[node name="H1" type="TextureRect" parent="MC/HBoxContainer/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("1_hta5f")
+
+[node name="ScoreLabel" type="Label" parent="MC/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Score:0"
+label_settings = SubResource("LabelSettings_8iokb")
