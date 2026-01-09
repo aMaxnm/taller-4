@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://ksrejexeb1gf"]
+[gd_scene load_steps=13 format=4 uid="uid://ksrejexeb1gf"]
 
 [ext_resource type="PackedScene" uid="uid://c5yedfkyomjme" path="res://scene/player/player.tscn" id="1_8aylg"]
 [ext_resource type="PackedScene" uid="uid://byjuqf8n6r1qh" path="res://scene/enemy/snail/snail.tscn" id="2_saiaw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://47umb66vnqlf" path="res://assets/tiles/Terrain (16x16).png" id="7_mj66c"]
 [ext_resource type="PackedScene" uid="uid://d1k2ro2yypcmq" path="res://scene/block/yellow_block.tscn" id="8_mti6n"]
 [ext_resource type="PackedScene" uid="uid://c36qf8sg54uge" path="res://scene/pause/pause.tscn" id="9_3uiwr"]
+[ext_resource type="PackedScene" uid="uid://1j3wtgcvitry" path="res://scene/game_over/game_over.tscn" id="10_5mq0g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mti6n"]
 texture = ExtResource("7_mj66c")
@@ -286,3 +287,6 @@ position = Vector2(4911, 402)
 position = Vector2(4176, 402)
 
 [node name="Pause" parent="." instance=ExtResource("9_3uiwr")]
+
+[node name="GameOver" parent="." instance=ExtResource("10_5mq0g")]
+visible = false
