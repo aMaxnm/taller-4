@@ -8,7 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cnwktfy5gtvu4" path="res://scene/fruta/fruta.tscn" id="6_n6eni"]
 [ext_resource type="Texture2D" uid="uid://47umb66vnqlf" path="res://assets/tiles/Terrain (16x16).png" id="7_mj66c"]
 [ext_resource type="PackedScene" uid="uid://d1k2ro2yypcmq" path="res://scene/block/yellow_block.tscn" id="8_mti6n"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://c36qf8sg54uge" path="res://scene/pause/pause.tscn" id="9_3uiwr"]
+=======
+[ext_resource type="PackedScene" uid="uid://1j3wtgcvitry" path="res://scene/game_over/game_over.tscn" id="9_3uiwr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mti6n"]
 texture = ExtResource("7_mj66c")
@@ -203,10 +207,10 @@ position = Vector2(4265, 525)
 position = Vector2(2050, 525)
 
 [node name="Snail2" parent="." instance=ExtResource("2_saiaw")]
-position = Vector2(196, 457)
+position = Vector2(237, 511)
 
 [node name="Player" parent="." instance=ExtResource("1_8aylg")]
-position = Vector2(62, 471)
+position = Vector2(81, 567)
 scale = Vector2(3, 3)
 
 [node name="Hud" parent="." instance=ExtResource("3_r8dxa")]
@@ -285,4 +289,9 @@ position = Vector2(4911, 402)
 [node name="YellowBlock13" parent="." instance=ExtResource("8_mti6n")]
 position = Vector2(4176, 402)
 
+<<<<<<< Updated upstream
 [node name="Pause" parent="." instance=ExtResource("9_3uiwr")]
+=======
+[node name="GameOver" parent="." instance=ExtResource("9_3uiwr")]
+visible = false
+>>>>>>> Stashed changes
