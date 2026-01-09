@@ -7,6 +7,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_8iokb"]
 font = ExtResource("2_in6qw")
 font_size = 22
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_in6qw")
