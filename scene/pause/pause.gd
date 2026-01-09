@@ -18,7 +18,7 @@ func _on_resume_pressed() -> void:
 		visible = false
 
 func _on_menu_pressed() -> void:
-	SignalManager.on_restart_game.emit()
+	pass # Replace with function body.
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

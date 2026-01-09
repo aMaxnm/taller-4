@@ -1,8 +1,6 @@
 extends Node
 <<<<<<< Updated upstream
 
-var menu_scene: PackedScene = preload("res://scene/menu/menu.tscn")
-
 var lives: int = 3
 var score: int = 0
 var is_paused: bool = false 
@@ -20,12 +18,7 @@ func _ready() -> void:
 	SignalManager.on_bonus_grabbed.connect(on_bonus_grabbed)
 <<<<<<< Updated upstream
 	SignalManager.toggle_pause.connect(_on_toggle_pause)
-	SignalManager.on_restart_game.connect(returnToMenu)
-
-func returnToMenu():
-	score = 0
-	get_tree().change_scene_to_packed(menu_scene)
-
+	
 func _on_toggle_pause() -> void:
 	is_paused = not is_paused
 	get_tree().paused = is_paused

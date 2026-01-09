@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mario2"
-run/main_scene="uid://ce4mwej3mni3"
+run/main_scene="uid://ksrejexeb1gf"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 

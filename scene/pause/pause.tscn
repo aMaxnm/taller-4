@@ -4,16 +4,14 @@
 [ext_resource type="FontFile" uid="uid://bltsfl5qv5mlc" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_grunj"]
 [ext_resource type="Texture2D" uid="uid://dg0lr273uj8nm" path="res://assets/buttons/Play/Default.png" id="2_wgm88"]
 [ext_resource type="Texture2D" uid="uid://bwglbpa8r0e6r" path="res://assets/buttons/Play/Hover.png" id="3_w2ppk"]
-[ext_resource type="Texture2D" uid="uid://crtg6uo8kk0vj" path="res://assets/buttons/Home/Default.png" id="5_grunj"]
-[ext_resource type="Texture2D" uid="uid://bb7y8thpc0uxo" path="res://assets/buttons/Home/Hover.png" id="6_cn8mt"]
+[ext_resource type="Texture2D" uid="uid://cg767f0b4k4hc" path="res://assets/buttons/Levels/Default.png" id="5_cn8mt"]
+[ext_resource type="Texture2D" uid="uid://vkrbo0mbjpt5" path="res://assets/buttons/Levels/Hover.png" id="6_0camu"]
 [ext_resource type="Texture2D" uid="uid://dvp6n1y61i241" path="res://assets/buttons/ArrowLeft-Thin/Default.png" id="7_ni3vd"]
 [ext_resource type="Texture2D" uid="uid://bx2da4y2hwfck" path="res://assets/buttons/ArrowLeft-Thin/Hover.png" id="8_w61ms"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8eeok"]
 font = ExtResource("2_grunj")
 font_size = 34
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
@@ -59,8 +57,8 @@ texture_hover = ExtResource("3_w2ppk")
 
 [node name="menu" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("5_grunj")
-texture_hover = ExtResource("6_cn8mt")
+texture_normal = ExtResource("5_cn8mt")
+texture_hover = ExtResource("6_0camu")
 
 [node name="exit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
