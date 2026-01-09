@@ -1,11 +1,13 @@
 extends Node
 
+var menu_scene: PackedScene = preload("res://scene/menu/menu.tscn")
+
 var lives: int = 3
 var score: int = 0
 var is_paused: bool = false 
-var menu_scene: PackedScene = preload("res://scene/test_level/test_level.tscn")
 
 @onready var player = $Player
+
 
 
 func _ready() -> void:
