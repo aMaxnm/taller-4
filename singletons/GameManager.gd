@@ -1,24 +1,18 @@
 extends Node
-<<<<<<< Updated upstream
 
 var menu_scene: PackedScene = preload("res://scene/menu/menu.tscn")
 
 var lives: int = 3
 var score: int = 0
 var is_paused: bool = false 
-=======
- 
-var menu_scene: PackedScene = preload("res://scene/test_level/test_level.tscn")
-var lives: int = 3
-var score: int = 0
+
 @onready var player = $Player
 
->>>>>>> Stashed changes
+
 
 func _ready() -> void:
 	SignalManager.on_hurt.connect(on_hurt_received)
 	SignalManager.on_bonus_grabbed.connect(on_bonus_grabbed)
-<<<<<<< Updated upstream
 	SignalManager.toggle_pause.connect(_on_toggle_pause)
 	SignalManager.on_restart_game.connect(returnToMenu)
 
@@ -29,9 +23,8 @@ func returnToMenu():
 func _on_toggle_pause() -> void:
 	is_paused = not is_paused
 	get_tree().paused = is_paused
-=======
 	SignalManager.on_restart_game.connect(return_to_menu)
->>>>>>> Stashed changes
+
 
 func on_hurt_received():
 	lives -= 1
