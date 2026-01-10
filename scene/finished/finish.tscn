@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3skp2reyhijj"]
+
+[ext_resource type="Script" uid="uid://b0qhaplh74rfy" path="res://scene/finished/finish.gd" id="1_18ts8"]
+[ext_resource type="LabelSettings" uid="uid://c1gubqjl1g3hh" path="res://scene/game_over/GO.tres" id="1_ncymg"]
+[ext_resource type="LabelSettings" uid="uid://c87lt3d3i4efp" path="res://scene/game_over/SUBTITLE.tres" id="2_bft01"]
+
+[node name="Finish" type="CanvasLayer"]
+script = ExtResource("1_18ts8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1162.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.5
+offset_right = 200.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FINISHED" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "FINISHED"
+label_settings = ExtResource("1_ncymg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 366.0
+offset_right = 714.0
+offset_bottom = 390.0
+text = "Press space to continue"
+label_settings = ExtResource("2_bft01")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

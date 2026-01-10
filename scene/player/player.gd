@@ -23,7 +23,8 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	pass
+	if position.y > 700:
+		SignalManager.on_game_over.emit()
 
 func _physics_process(delta: float) -> void:
 	if current_state != PLAYER_STATES.HURT:
