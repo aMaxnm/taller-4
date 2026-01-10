@@ -3,5 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bltsfl5qv5mlc" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_mi26r"]
 
 [resource]
+line_spacing = 50.0
+paragraph_spacing = 50.0
 font = ExtResource("1_mi26r")
 font_size = 23
