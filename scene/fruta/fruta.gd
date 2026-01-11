@@ -11,7 +11,7 @@ func _on_area_entered(area: Area2D) -> void:
 	SignalManager.on_bonus_grabbed.emit(score)
 	sprite_2d.visible = false
 	particles.emitting = true
-	SoundManager.play_sound(audio_player, SoundManager.PLAYER_SOUND_PIKCUP)
+	SoundManager.play_sound(audio_player, SoundManager.PLAYER_SOUND_PICKUP)
 	hitbox.set_deferred("disabled", true)
 
 func _on_cpu_particles_2d_finished() -> void:

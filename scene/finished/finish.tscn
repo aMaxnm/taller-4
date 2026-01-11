@@ -12,30 +12,31 @@ offset_right = 1162.0
 offset_bottom = 658.0
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 8
+[node name="MarginContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.65900004
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.65900004
 offset_left = -200.0
-offset_top = -50.5
+offset_top = -153.53201
 offset_right = 200.0
-offset_bottom = 50.5
+offset_bottom = -24.532013
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
 
 [node name="FINISHED" type="Label" parent="MarginContainer"]
 layout_mode = 2
 text = "FINISHED"
 label_settings = ExtResource("1_ncymg")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 442.0
-offset_top = 366.0
-offset_right = 714.0
-offset_bottom = 390.0
+[node name="continuelbl" type="Label" parent="MarginContainer"]
+layout_mode = 2
 text = "Press space to continue"
 label_settings = ExtResource("2_bft01")
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
