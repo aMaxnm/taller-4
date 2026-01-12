@@ -19,13 +19,14 @@ func _ready() -> void:
 
 func returnToMenu():
 	score = 0
+	_on_toggle_pause()
 	get_tree().change_scene_to_packed(menu_scene)
 
 func _on_toggle_pause() -> void:
 	is_paused = not is_paused
 	get_tree().paused = is_paused
 
-	SignalManager.on_restart_game.connect(return_to_menu)
+	SignalManager.on_restart_game.connect(returnToMenu)
 
 func on_hurt_received():
 	lives -= 1

@@ -10,3 +10,4 @@ signal resume_game
 signal on_game_over()
 signal on_restart_game()
 signal on_finished
+signal return_to_menu()
